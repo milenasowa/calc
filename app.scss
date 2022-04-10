@@ -10,10 +10,17 @@ body {
     height: 100%;
     margin: 0;
 }
+header {
+    height: 50px;
+    width: 100%;
+    .calc-display-header {
+
+    }
+}
 
 #main-content {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 50px);
     display: flex;
     flex-direction: row;
 
@@ -24,11 +31,6 @@ body {
         #calc-display {
             height: 30%;
             width: 100%;
-
-            .calc-display-header {
-                height: 20%;
-                width: 100%;
-            }
 
             .calc-display-menu {
                 height: 20%;
@@ -77,9 +79,6 @@ body {
                 }
             }
         }
-
-
-
     }
 
     aside {      
@@ -94,14 +93,13 @@ body {
 @media (min-width: 576px) {
     #main-content {
         width: 100%;
-        height: 100%;
+        height: calc(100% - 50px);
         display: flex;
         flex-direction: row;
 
         section {
             width: 70%;
             height: 100%;
-
         }
 
         aside {
