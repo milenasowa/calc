@@ -16,6 +16,10 @@ body {
     margin: 0;
     background-color: rgba(32, 33, 35, 1);
     color: rgba(255, 255, 255, 1);
+    img {                                   
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%)        
+    }
+
 
 }
 
@@ -67,6 +71,8 @@ header {
         #calc-display {
             height: 30%;
             width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
 
             .calc-display-menu {
                 height: 40px;
@@ -74,8 +80,7 @@ header {
                 display: flex;
                 flex-direction: row;
 
-                span:nth-child(1) {
-                    background-color: palevioletred;
+                span:nth-child(1) {                    
                     height: 100%;
                     width: 70%;
                     display: flex;
@@ -89,8 +94,10 @@ header {
                         font-weight: bold;
 
                         img {
-                            height: 30px;
-                            width: 30px;
+                            height: 20px;
+                            width: 20px;                            
+                            filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                            
                         }
                     }
 
@@ -116,8 +123,8 @@ header {
                     align-items: center;
 
                     img {
-                        height: 30px;
-                        width: 30px;
+                        height: 20px;
+                        width: 20px;
                     }
                 }
             }
@@ -125,11 +132,27 @@ header {
             .calc-display-main {
                 height: calc(100% - 80px);
                 width: 100%;
+                font-size: 70px;
+                display: flex;
+                justify-content: flex-end;
+
+
             }
 
             .calc-display-footer {
                 height: 40px;
                 width: 100%;
+                display: flex;
+                flex-direction: row;
+               
+
+                div {
+                    height: 40px;
+                    width: calc(100% / 5);
+                    max-width: 75px;
+                    background-color: aqua;
+                }
+
             }
         }
 
@@ -163,9 +186,8 @@ header {
 
 
                     &:hover {
-                        opacity: 50%;
+                        opacity: 100%;
                         transform: scale(1.1);
-                        border: 0 !important;
                         cursor: pointer;
                     }
 
