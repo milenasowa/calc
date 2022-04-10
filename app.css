@@ -10,4 +10,70 @@ body {
   height: 100%;
   margin: 0;
 }
+
+#main-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#main-content section {
+  width: 100%;
+  height: 100%;
+}
+
+#main-content section #calc-display {
+  height: 30%;
+  width: 100%;
+}
+
+#main-content section .calc-button {
+  height: 70%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main-content section .calc-button .buttons-row {
+  height: calc(100% / 6);
+  width: 100%;
+}
+
+#main-content aside {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #main-content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #main-content section {
+    width: 70%;
+    height: 100%;
+  }
+  #main-content aside {
+    width: 30%;
+    height: 100%;
+    display: block;
+  }
+}
 /*# sourceMappingURL=app.css.map */
