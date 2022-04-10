@@ -64,6 +64,16 @@ body {
                 .button {
                     height: 100%;
                     width: calc(100% / 4);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 25px;
+
+                    
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
                 }
             }
         }
