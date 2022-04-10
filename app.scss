@@ -24,6 +24,28 @@ body {
         #calc-display {
             height: 30%;
             width: 100%;
+
+            .calc-display-header {
+                height: 20%;
+                width: 100%;
+            }
+
+            .calc-display-menu {
+                height: 20%;
+                width: 100%;
+            }
+
+            .calc-display-main {
+                height: 40%;
+                width: 100%;
+            }
+
+            .calc-display-footer {
+                height: 20%;
+                width: 100%;
+            }
+
+        
         }
 
         .calc-button {
@@ -36,6 +58,13 @@ body {
             .buttons-row {
                 height: calc(100% / 6);
                 width: 100%;
+                display: flex;
+                flex-direction: row;
+
+                .button {
+                    height: 100%;
+                    width: calc(100% / 4);
+                }
             }
         }
 
