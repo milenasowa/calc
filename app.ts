@@ -1,4 +1,3 @@
-debugger
 let button1 = document.getElementById("bt-1");
 let button2 = document.getElementById("bt-2");
 let button3 = document.getElementById("bt-3");
@@ -16,24 +15,33 @@ let buttonDivide = document.getElementById("bt-divide");
 let buttonMultiple = document.getElementById("bt-multiple");
 let displayBox = document.getElementById("display-box");
 
+let sum = 0;
+let currentNumber: string = ""
+
 button1?.addEventListener("click", clickButton1);
 function clickButton1() {
-    displayResult (1)
+    
+    currentNumber = currentNumber + 1
+    // fillBox(currentNumber)
+    displayResult ( Number(currentNumber))
 }
-function displayResult (gggg: number) {
+function displayResult (gggg: number ) {
     displayBox.innerHTML = gggg
+}
+function fillBox ( aaaa:string) {
+    displayBox?.innerHTML = aaaa
 }
 
 button2?.addEventListener("click", clickButton2);
 function clickButton2() {
-    displayResult (2)
+    sum = sum + 2
+    displayResult (sum)
 }
-
-
 
 button3?.addEventListener("click", clickButton3);
 function clickButton3(){
-    displayResult (3)
+    sum = sum + 3
+    displayResult (sum)
 }
 
 

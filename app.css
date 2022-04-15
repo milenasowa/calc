@@ -285,7 +285,11 @@ header span:nth-child(2) div:nth-child(1) {
 }
 
 #main-content section .calc-button .buttons-row .button-number {
-  background-color: rgba(20, 20, 21, 0.004);
+  background-color: rgba(21, 20, 20, 0.004);
+}
+
+#main-content section .calc-button .buttons-row .button-number:hover {
+  background-color: rgba(255, 0, 0, 0);
 }
 
 #main-content aside {
