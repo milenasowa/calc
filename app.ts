@@ -8,44 +8,115 @@ let button7 = document.getElementById("bt-7");
 let button8 = document.getElementById("bt-8");
 let button9 = document.getElementById("bt-9");
 let button0 = document.getElementById("bt-0");
+let buttonCe = document.getElementById("bt-ce");
+let buttonCancel = document.getElementById("bt-cancel");
 let buttonPlus = document.getElementById("bt-plus");
 let buttonMinus = document.getElementById("bt-minus");
 let buttonSum = document.getElementById("bt-sum");
 let buttonDivide = document.getElementById("bt-divide");
 let buttonMultiple = document.getElementById("bt-multiple");
 let displayBox = document.getElementById("display-box");
-
 let sum = 0;
 let currentNumber: string = ""
+function currentInfo() {
+    fillBox(currentNumber)
+}
 
 button1?.addEventListener("click", clickButton1);
 function clickButton1() {
-    
+
     currentNumber = currentNumber + 1
-    // fillBox(currentNumber)
-    displayResult ( Number(currentNumber))
+    currentInfo()
+
 }
-function displayResult (gggg: number ) {
+function displayResult(gggg: number) {
+    // @ts-ignore
     displayBox.innerHTML = gggg
+
 }
-function fillBox ( aaaa:string) {
+function fillBox(aaaa: string) {
+    //@ts-ignore
     displayBox?.innerHTML = aaaa
 }
 
 button2?.addEventListener("click", clickButton2);
 function clickButton2() {
-    sum = sum + 2
-    displayResult (sum)
+    currentNumber = currentNumber + 2
+    currentInfo()
 }
 
 button3?.addEventListener("click", clickButton3);
-function clickButton3(){
-    sum = sum + 3
-    displayResult (sum)
+function clickButton3() {
+    currentNumber = currentNumber + 3
+    currentInfo()
+}
+
+button4?.addEventListener("click", clickButton4);
+function clickButton4() {
+    currentNumber = currentNumber + 4
+    currentInfo()
+
+}
+
+button5?.addEventListener("click", clickButton5);
+function clickButton5() {
+    currentNumber = currentNumber + 5
+    currentInfo()
+}
+
+button6?.addEventListener("click", clickButton6);
+function clickButton6() {
+    currentNumber = currentNumber + 6
+    currentInfo()
+}
+
+button7?.addEventListener("click", clickButton7);
+function clickButton7() {
+    currentNumber = currentNumber + 7
+    currentInfo()
+}
+
+button8?.addEventListener("click", clickButton8);
+function clickButton8() {
+    currentNumber = currentNumber + 8
+
+    currentInfo()
+}
+
+button9?.addEventListener("click", clickButton9);
+function clickButton9() {
+    currentNumber = currentNumber + 9
+    currentInfo()
+}
+
+button0?.addEventListener("click", clickButton0);
+function clickButton0() {
+    currentNumber = currentNumber + 0
+    currentInfo()
 }
 
 
-    
+
+buttonCe?.addEventListener("click",clickButtonCe);
+function clickButtonCe() {
+    currentNumber = ""
+    displayResult(0)
+
+} 
+
+buttonCancel?.addEventListener("click",clickButtonCancel);
+function clickButtonCancel() {
+    currentNumber = ""
+    displayResult(0)
+
+}
+
+
+
+
+
+
+
 
 
 
