@@ -19,12 +19,14 @@ let displayBox = document.getElementById("display-box");
 let historyBox = document.getElementById("history-box");
 let currentNumber: string = ""
 let currentNumber2: string = ""
+let sum = ""
  //@ts-ignore
 let sign: string = ""
 
 
 button1?.addEventListener("click", clickButton1);
 function clickButton1() {
+    debugger
 
     if (sign === "") {       
         currentNumber = currentNumber + 1
@@ -194,29 +196,56 @@ function clickButtonCancel() {
 
 buttonPlus?.addEventListener("click",clickButtonPlus);
 function clickButtonPlus() {
-  sign = "+"
+  
+    if (sign=== ""){
+        sign ="+"
+    } else {
+        currentNumber = eval(sum)
+        sign = "+"
+        currentNumber2 = ""
+    }
 }
 
 buttonMinus?.addEventListener("click",clickButtonMinus);
 function clickButtonMinus() {
-  sign = "-"
+  
+    if (sign === ""){
+        sign = "-"
+    }else {
+        currentNumber = eval(sum)
+        sign = "-"
+        currentNumber2 = ""
+    }
+
 }
 
 buttonDivide?.addEventListener("click",clickButtonDivide);
 function clickButtonDivide() {
 
-  sign = "/"
+  if (sign ===""){
+      sign = ""
+  }else {
+      currentNumber = eval(sum)
+      sign = "/"
+      currentNumber2 = ""
+  }
 }
 
 buttonMultiple?.addEventListener("click",clickButtonMultiple);
 function clickButtonMultiple() {
-  sign = "*"
+  if (sign === ""){
+      sign = ""
+  }else {
+      currentNumber = eval(sum)
+      sign = "*"
+      currentNumber2 = ""
+  }
 }
 
 buttonSum?.addEventListener("click",clickButtonSum);
 function clickButtonSum() {
     debugger
-  let sum = currentNumber + sign + currentNumber2
+  sum = currentNumber + sign + currentNumber2
   let equal = eval (sum)
   fillBox(equal)
   

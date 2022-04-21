@@ -20,10 +20,12 @@ let displayBox = document.getElementById("display-box");
 let historyBox = document.getElementById("history-box");
 let currentNumber = "";
 let currentNumber2 = "";
+let sum = "";
 //@ts-ignore
 let sign = "";
 button1 === null || button1 === void 0 ? void 0 : button1.addEventListener("click", clickButton1);
 function clickButton1() {
+    debugger;
     if (sign === "") {
         currentNumber = currentNumber + 1;
         fillBox(currentNumber);
@@ -171,24 +173,52 @@ function clickButtonCancel() {
 }
 buttonPlus === null || buttonPlus === void 0 ? void 0 : buttonPlus.addEventListener("click", clickButtonPlus);
 function clickButtonPlus() {
-    sign = "+";
+    if (sign === "") {
+        sign = "+";
+    }
+    else {
+        currentNumber = eval(sum);
+        sign = "+";
+        currentNumber2 = "";
+    }
 }
 buttonMinus === null || buttonMinus === void 0 ? void 0 : buttonMinus.addEventListener("click", clickButtonMinus);
 function clickButtonMinus() {
-    sign = "-";
+    if (sign === "") {
+        sign = "-";
+    }
+    else {
+        currentNumber = eval(sum);
+        sign = "-";
+        currentNumber2 = "";
+    }
 }
 buttonDivide === null || buttonDivide === void 0 ? void 0 : buttonDivide.addEventListener("click", clickButtonDivide);
 function clickButtonDivide() {
-    sign = "/";
+    if (sign === "") {
+        sign = "";
+    }
+    else {
+        currentNumber = eval(sum);
+        sign = "/";
+        currentNumber2 = "";
+    }
 }
 buttonMultiple === null || buttonMultiple === void 0 ? void 0 : buttonMultiple.addEventListener("click", clickButtonMultiple);
 function clickButtonMultiple() {
-    sign = "*";
+    if (sign === "") {
+        sign = "";
+    }
+    else {
+        currentNumber = eval(sum);
+        sign = "*";
+        currentNumber2 = "";
+    }
 }
 buttonSum === null || buttonSum === void 0 ? void 0 : buttonSum.addEventListener("click", clickButtonSum);
 function clickButtonSum() {
     debugger;
-    let sum = currentNumber + sign + currentNumber2;
+    sum = currentNumber + sign + currentNumber2;
     let equal = eval(sum);
     fillBox(equal);
 }
