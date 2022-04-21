@@ -184,16 +184,36 @@ header span:nth-child(2) div:nth-child(1) {
 #main-content section #calc-display .calc-display-main {
   height: calc(100% - 80px);
   width: 100%;
-  font-size: 130px;
+}
+
+#main-content section #calc-display .calc-display-main #history-box {
+  height: 30px;
+  width: 100%;
+  font-size: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-content section #calc-display .calc-display-main #display-box {
+  height: calc(100% - 30px);
+  width: 100%;
+  font-size: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #main-content section #calc-display .calc-display-footer {

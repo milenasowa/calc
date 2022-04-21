@@ -16,17 +16,23 @@ let buttonSum = document.getElementById("bt-sum");
 let buttonDivide = document.getElementById("bt-divide");
 let buttonMultiple = document.getElementById("bt-multiple");
 let displayBox = document.getElementById("display-box");
-let sum = 0;
+let historyBox = document.getElementById("history-box");
 let currentNumber: string = ""
-function currentInfo() {
-    fillBox(currentNumber)
-}
+let currentNumber2: string = ""
+ //@ts-ignore
+let sign: string = ""
+
 
 button1?.addEventListener("click", clickButton1);
 function clickButton1() {
 
-    currentNumber = currentNumber + 1
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 1
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 1
+        fillBox(currentNumber2)
+    }
 
 }
 function displayResult(gggg: number) {
@@ -37,78 +43,183 @@ function displayResult(gggg: number) {
 function fillBox(aaaa: string) {
     //@ts-ignore
     displayBox?.innerHTML = aaaa
+    historyDisplay (currentNumber + sign + currentNumber2)
+}
+function historyDisplay (sum:string){
+    // @ts-ignore
+    historyBox?.innerHTML = sum
 }
 
 button2?.addEventListener("click", clickButton2);
 function clickButton2() {
-    currentNumber = currentNumber + 2
-    currentInfo()
+    
+    
+      //@ts-ignore
+    if (sign === "") {       
+        currentNumber = currentNumber + 2
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 2
+        fillBox(currentNumber2)
+    }
+
+    
+
+    // let test = eval("111+10")
+    // console.log(test)
 }
 
 button3?.addEventListener("click", clickButton3);
 function clickButton3() {
-    currentNumber = currentNumber + 3
-    currentInfo()
+
+    if (sign === "") {       
+        currentNumber = currentNumber + 3
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 3
+        fillBox(currentNumber2)
+    }
+    
+    // 1. jezeli jest sign === null to dodawaj do current number, else do current number 2.
+    // w elsach funkcja odpowieadajaca za zaki ma byc przypisana do sign,. 
+    //  gdy zostanie wywolana metoda rowna sie ma byc wywolana current number
+
 }
 
 button4?.addEventListener("click", clickButton4);
 function clickButton4() {
-    currentNumber = currentNumber + 4
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 4
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 4
+        fillBox(currentNumber2)
+    }
+    
 
 }
 
 button5?.addEventListener("click", clickButton5);
 function clickButton5() {
-    currentNumber = currentNumber + 5
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 5
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 5
+        fillBox(currentNumber2)
+    }
 }
 
 button6?.addEventListener("click", clickButton6);
 function clickButton6() {
-    currentNumber = currentNumber + 6
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 6
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 6
+        fillBox(currentNumber2)
+    }
+    
 }
 
 button7?.addEventListener("click", clickButton7);
 function clickButton7() {
-    currentNumber = currentNumber + 7
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 7
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 7
+        fillBox(currentNumber2)
+    }
 }
 
 button8?.addEventListener("click", clickButton8);
 function clickButton8() {
-    currentNumber = currentNumber + 8
-
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 8
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 8
+        fillBox(currentNumber2)
+    }
+    
 }
 
 button9?.addEventListener("click", clickButton9);
 function clickButton9() {
-    currentNumber = currentNumber + 9
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 9
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 9
+        fillBox(currentNumber2)
+    }
+
 }
 
 button0?.addEventListener("click", clickButton0);
 function clickButton0() {
-    currentNumber = currentNumber + 0
-    currentInfo()
+    if (sign === "") {       
+        currentNumber = currentNumber + 0
+        fillBox(currentNumber)
+    } else {
+        currentNumber2 = currentNumber2 + 0
+        fillBox(currentNumber2)
+    }
 }
 
 
 
 buttonCe?.addEventListener("click",clickButtonCe);
 function clickButtonCe() {
-    currentNumber = ""
+    currentNumber = ""  
+    currentNumber2 = ""
+    //@ts-ignore
+    sign = ""
     displayResult(0)
+    historyDisplay("")
 
 } 
 
 buttonCancel?.addEventListener("click",clickButtonCancel);
 function clickButtonCancel() {
-    currentNumber = ""
+    currentNumber = ""    
+    currentNumber2 = ""
+    //@ts-ignore
+    sign = ""
     displayResult(0)
+    historyDisplay("")
 
+}
+
+buttonPlus?.addEventListener("click",clickButtonPlus);
+function clickButtonPlus() {
+  sign = "+"
+}
+
+buttonMinus?.addEventListener("click",clickButtonMinus);
+function clickButtonMinus() {
+  sign = "-"
+}
+
+buttonDivide?.addEventListener("click",clickButtonDivide);
+function clickButtonDivide() {
+
+  sign = "/"
+}
+
+buttonMultiple?.addEventListener("click",clickButtonMultiple);
+function clickButtonMultiple() {
+  sign = "*"
+}
+
+buttonSum?.addEventListener("click",clickButtonSum);
+function clickButtonSum() {
+    debugger
+  let sum = currentNumber + sign + currentNumber2
+  let equal = eval (sum)
+  fillBox(equal)
+  
 }
 
 

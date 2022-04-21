@@ -21,8 +21,6 @@ body {
     img {
         filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
     }
-
-
 }
 
 header {
@@ -31,9 +29,7 @@ header {
     display: flex;
     flex-direction: row;
     padding: 3px;
-    box-sizing: border-box;
-    
-    
+    box-sizing: border-box;       
     
     span {
         height: 100%;
@@ -68,9 +64,6 @@ header {
         }
 
     }
-
-
-
 }
 
 #main-content {
@@ -146,11 +139,24 @@ header {
 
             .calc-display-main {
                 height: calc(100% - 80px);
-                width: 100%;
-                font-size: 130px;
-                display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
+                width: 100%;    
+                               
+                #history-box{
+                    height: 30px;
+                    width: 100%;                    
+                    font-size: 30px;                   
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+                #display-box{
+                    height: calc(100% - 30px);
+                    width: 100%;                   
+                    font-size: 100px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
 
 
             }
