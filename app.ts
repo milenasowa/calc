@@ -26,7 +26,7 @@ let sign: string = ""
 
 button1?.addEventListener("click", clickButton1);
 function clickButton1() {
-    debugger
+
 
     if (sign === "") {       
         currentNumber = currentNumber + 1
@@ -244,7 +244,7 @@ function clickButtonMultiple() {
 
 buttonSum?.addEventListener("click",clickButtonSum);
 function clickButtonSum() {
-    debugger
+    
   sum = currentNumber + sign + currentNumber2
   let equal = eval (sum)
   fillBox(equal)
